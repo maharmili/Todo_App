@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body{
+  background-color: #333;
+ display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+}
+.main-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+}
+.center-container{
+  margin-top: 15px;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  background-color: rgb(77, 72, 72);
+  padding: 20px;
+  border-radius: 25px;
+  
+}
+.app-heading{
+  padding: 4px;
+  color: white;  
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-transform: uppercase;
+}
+.input-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+ 
+}
+.input-box-todo{
+  margin-left: 10px;
+  width: 70%;
+  height: 40px;
+  border-radius: 14px;
+  border:1px solid black;
+  padding-left: 10px;  
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  outline: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+  margin-top: 10px;
+  white-space: normal;
+}
+.add-btn{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  border:none;
+  background-color:#31c155;
   color: white;
+  font-weight: bolder;
+  font-size: larger;
+  margin-left: 10px;  
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(11, 10, 10, 0.3);
+  transition: 0.3s;
+  margin-top: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.add-btn:active{
+  box-shadow: none;
 }
+.list-container{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+ 
+}
+.list-item{
+  list-style-type: none;
+   border:2px solid rgb(63, 61, 61);
+  color:white;
+  padding:3px;
+  padding-left: 5px;
+  border-radius: 5px ; 
+height: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.icons{
+  position: absolute;
+  right: 10px;
+}
+.icons i{
+  margin: 4px;
+  font-size: large;
+  cursor: pointer;
+  transition: 0.1s;   
+}
+.icons i:hover{
+  transform: scale(1.2);  
+}
+.icon-delete:hover{
+  color:  rgb(230, 50, 50);
+}
+.deleteall-btn{
+text-align: center;
+width: 20%;
+height: 40px;
+margin-top: 5px;
+border-radius: 14px;
+  border:1px solid gray;
+  margin-left: 40%;
+  }
+  .deleteall-btn:hover {
+    background-color: rgb(230, 50, 50);
+    color: white;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media (max-width: 768px) {
+  .center-container {
+    width: 90%;
+    padding: 10px;
+    margin-top: 50px
   }
-  to {
-    transform: rotate(360deg);
+
+  .input-box-todo {
+    width: 80%;
   }
+
+  .add-btn {
+    margin-left: 5px;
+  }
+
+  .deleteall-btn {
+    width: 40%;
+    margin-left: 30%;
+    
+   }
 }
